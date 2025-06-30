@@ -220,112 +220,7 @@ Creates a calendar event for content deadlines.
 
 Lists upcoming calendar events.
 
-## 🔄 Workflow Examples
-
-### Example 1: Create a Blog Post Plan
-
-```
-User: "I need to create a blog post about 'Machine Learning Basics' due next Friday. Can you help me plan this?"
-
-Assistant: I'll help you create a comprehensive content plan for your blog post about Machine Learning Basics. Let me set up the entire workflow for you.
-
-[Uses workflow_create_content_plan with:
-- topic: "Machine Learning Basics"
-- contentType: "blog"
-- deadline: next Friday
-- assignee: user's email]
-```
-
-**Result:** Creates research, Notion page, GitHub issue, and calendar events.
-
-### Example 2: Research a Topic
-
-```
-User: "Can you research 'Blockchain Technology' for me?"
-
-Assistant: I'll conduct comprehensive research on Blockchain Technology and create a detailed summary for you.
-
-[Uses workflow_research_topic with:
-- topic: "Blockchain Technology"
-- depth: "comprehensive"]
-```
-
-**Result:** Performs web research, creates Notion research page, and GitHub tracking issue.
-
-### Example 3: Publish Content
-
-```
-User: "I'm ready to publish the content with ID 'abc123' to the main repository."
-
-Assistant: I'll help you publish that content through the automated workflow.
-
-[Uses workflow_publish_content with:
-- contentId: "abc123"
-- repository: "main-repo"]
-```
-
-**Result:** Retrieves content from Notion, creates GitHub branch and PR, updates status.
-
-## 🧪 Testing
-
-### Unit Tests
-
-```bash
-npm test
-```
-
-### Manual Testing
-
-```bash
-# Test individual services
-npm run test:github
-npm run test:notion
-npm run test:calendar
-```
-
-## 🔒 Security & Permissions
-
-### Authentication
-
-- **GitHub**: Personal Access Token with minimal required permissions
-- **Notion**: Integration token with database access
-- **Google Calendar**: OAuth2 flow for calendar access
-
-### Permission Context
-
-Each tool respects the authentication and permission context:
-
-- GitHub operations are limited to the specified repository
-- Notion operations are limited to the specified database
-- Calendar operations are limited to the authenticated user's calendar
-
-## 🚀 Deployment
-
-### Local Development
-
-```bash
-npm run dev
-```
-
-### Production Deployment
-
-```bash
-npm run build
-npm start
-```
-
-### Docker Deployment
-
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY dist ./dist
-CMD ["node", "dist/index.js"]
-```
-
-## 📊 Monitoring & Logging
+## Monitoring & Logging
 
 The server includes comprehensive logging:
 
@@ -334,7 +229,7 @@ The server includes comprehensive logging:
 - Performance metrics
 - Authentication status
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -342,19 +237,18 @@ The server includes comprehensive logging:
 4. Add tests
 5. Submit a pull request
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details.
 
-## 🆘 Support
+## Support
 
 For issues and questions:
 
 1. Check the documentation
-2. Review existing issues
-3. Create a new issue with detailed information
+2. Open an issue on GitHub
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 - [ ] Slack integration for notifications
 - [ ] Content analytics and performance tracking
@@ -364,7 +258,3 @@ For issues and questions:
 - [ ] Social media publishing integration
 - [ ] Content performance analytics
 - [ ] Team collaboration features
-
----
-
-**Built with ❤️ for the MCP community**
