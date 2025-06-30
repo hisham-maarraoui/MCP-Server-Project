@@ -1,0 +1,26 @@
+# Node dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.*
+
+# Log files
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+
+# Token and credential files
+*.token
+*.pem
+
+# VSCode settings
+.vscode/
+
+# Claude/Anthropic/Claude Desktop config and logs
+/Users/hishammaarraoui/Library/Application Support/Claude/ 
